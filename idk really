@@ -1,0 +1,22 @@
+import random
+
+# list of options
+options = ['rock', 'paper', 'scissors']
+
+# function to play the game
+def play_game():
+    user_choice = input("Enter rock, paper, or scissors: ")
+    computer_choice = random.choice(options)
+
+    # check for a tie
+    if user_choice == computer_choice:
+        print("Tie!")
+    # check for user win
+    elif (user_choice == 'rock' and computer_choice == 'scissors') or (user_choice == 'paper' and computer_choice == 'rock') or (user_choice == 'scissors' and computer_choice == 'paper'):
+        print("You win!")
+    # if none of the above conditions are met, the user loses
+    else:
+        print("You lose!")
+
+# run the game
+play_game()
